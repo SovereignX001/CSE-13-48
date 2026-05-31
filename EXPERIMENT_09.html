@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 9</title>
+
+    <style>
+
+        body{
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button{
+            background-color: aqua;
+            color: red;
+            border: 3px solid green;
+            width: 200px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>Registration Form</h1>
+
+<input type="text" id="name" placeholder="Enter Your Name">
+<br><br>
+
+<input type="email" id="email" placeholder="Enter Your Email">
+<br><br>
+
+<input type="password" id="password" placeholder="Enter Your Password">
+<br><br>
+
+<p id="showName"></p>
+<p id="showEmail"></p>
+<p id="showPassword"></p>
+
+<button onclick="showData()">Submit</button>
+
+<script>
+
+function showData(){
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(name === "" || email === "" || password === ""){
+        alert("Please Fill All Fields");
+    }
+    else{
+        alert("Registered Successfully");
+    }
+
+    document.getElementById("showName").innerText = "Name: " + name;
+    document.getElementById("showEmail").innerText = "Email: " + email;
+    document.getElementById("showPassword").innerText = "Password: " + password;
+}
+
+</script>
+
+</body>
+</html>
